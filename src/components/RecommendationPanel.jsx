@@ -41,11 +41,11 @@ export default function RecommendationPanel({
   };
 
   return (
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 z-50 mt-4 animate-in fade-in scale-95 duration-200">
-      <div className="bg-[#1F2A3A] rounded-xl shadow-xl border border-blue-400/30 p-4 min-w-[320px] max-w-[360px]">
+    <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
+      <div className="bg-[#1F2A3A] rounded-lg shadow-xl border border-blue-400/30 p-4 w-full max-w-md min-w-[340px] pointer-events-auto animate-in fade-in scale-95 duration-200">
         {/* Header */}
-        <div className="mb-4 pb-3 border-b border-border/30">
-          <h3 className="text-sm font-semibold text-blue-300 mb-2">
+        <div className="mb-3 md:mb-4 pb-2 md:pb-3 border-b border-border/30">
+          <h3 className="text-xs md:text-sm font-semibold text-blue-300 mb-1 md:mb-2">
             AI Recommendations
           </h3>
           <p className="text-xs text-text-gray">

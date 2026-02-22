@@ -18,7 +18,7 @@ export default function RoleFilter({
 
   return (
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-1">
 
       {ROLES.map((role, index) => {
 
@@ -34,7 +34,8 @@ export default function RoleFilter({
             title={`Filter by ${role}`}
 
             className={`
-              w-9 h-9
+              w-8
+              h-8
               flex items-center justify-center
 
               rounded-md

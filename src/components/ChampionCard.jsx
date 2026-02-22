@@ -32,7 +32,7 @@ export default function ChampionCard({ champion, onClick, isAssigned, isRecommen
       {...listeners}
       {...attributes}
       style={style}
-      className={`flex flex-col justify-center items-center gap-1.5 p-2 w-24 h-[120px] rounded-champ border bg-card-bg font-inter shrink-0 transition-all hover:border-opacity-80 cursor-grab active:cursor-grabbing touch-none ${
+      className={`flex flex-col justify-center items-center gap-1 p-1 w-24 h-[120px] rounded-champ border bg-card-bg font-inter transition-all hover:border-opacity-80 cursor-grab active:cursor-grabbing touch-none ${
         isDragging ? 'opacity-50 scale-105 shadow-lg' : ''
       } ${isRecommendationOpen ? 'border-blue-400 border-2 shadow-blue-glow' : 'border-[rgba(51,65,85,0.4)]'} ${
         isAssigned ? 'opacity-60' : ''
@@ -49,7 +49,7 @@ export default function ChampionCard({ champion, onClick, isAssigned, isRecommen
           }}
         />
       </div>
-      <span className="font-normal text-[15px] leading-tight text-text-gray text-center truncate w-full">
+      <span className="font-normal text-[15px] leading-tight text-text-gray text-center truncate w-full line-clamp-2">
         {champion.name}
       </span>
     </button>
