@@ -10,7 +10,7 @@ The frontend provides a real-time drafting experience similar to the in-game Lea
 
 Frontend Deployment:
 
-https://your-vercel-link.vercel.app
+https://lol-draft-analyzer-frontend.vercel.app/
 
 Backend powered by FastAPI ML inference API hosted on AWS EC2.
 
