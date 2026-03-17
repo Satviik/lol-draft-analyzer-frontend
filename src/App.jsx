@@ -15,6 +15,7 @@ import RecommendationPanel from './components/RecommendationPanel';
 import RoleFilter from './components/RoleFilter';
 import { getChampions, normalizeChampionName, getDisplayNameFromDataDragonId } from './data/champions';
 import championRoles from './data/champion_roles.json';
+import InstructionModal from "./components/InstructionModal";
 
 const INITIAL_SLOTS = {
   'blue-top': null,
@@ -31,6 +32,7 @@ const INITIAL_SLOTS = {
 
 export default function App() {
   const allChampions = useMemo(() => getChampions(), []);
+  const [showInstructions, setShowInstructions] = useState(false);
   const [search, setSearch] = useState('');
   const [activeRole, setActiveRole] = useState(null);
   const [assignedSlots, setAssignedSlots] = useState(INITIAL_SLOTS);
@@ -355,6 +357,13 @@ const canRecommend = useMemo(() => {
             </div>
             <div className="flex gap-2 items-center w-full sm:w-auto">
               <button
+              type="button"
+              onClick={() => setShowInstructions(true)}
+              className="shrink-0 px-4 py-2.5 rounded-xl bg-[#1E293B] text-white font-semibold text-sm hover:bg-[#334155] transition-colors"
+            >
+              How to Use
+            </button>
+              <button
                 type="button"
                 onClick={handleRecommend}
                 disabled={!canRecommend}
@@ -469,6 +478,10 @@ const canRecommend = useMemo(() => {
           )}
         </DragOverlay>
       </DndContext>
+      <InstructionModal
+      isOpen={showInstructions}
+      onClose={() => setShowInstructions(false)}
+      />
     </>
   );
 }

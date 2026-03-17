@@ -32,3 +32,42 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+.scroll-theme{
+  background: #0f172a;
+  border: 2px solid #c89b3c;
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.7),
+    inset 0 0 20px rgba(0,0,0,0.4);
+
+  position: relative;
+}
+
+/* Scroll top roll */
+.scroll-theme::before{
+  content:"";
+  position:absolute;
+  top:-20px;
+  left:20px;
+  right:20px;
+  height:25px;
+
+  background:#1e293b;
+  border-radius:20px;
+  border:2px solid #c89b3c;
+}
+
+/* Scroll bottom roll */
+.scroll-theme::after{
+  content:"";
+  position:absolute;
+  bottom:-20px;
+  left:20px;
+  right:20px;
+  height:25px;
+
+  background:#1e293b;
+  border-radius:20px;
+  border:2px solid #c89b3c;
+}
